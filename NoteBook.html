@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<title>NoteBook</title>
+<style>
+
+    input{
+  
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+
+    }
+
+    body{
+        background-color:white;
+
+    }
+
+    li {
+        background: #cce5ff;
+        margin: 5px;
+    }
+
+</style>
+
+<body>
+    <h2>Notebook Implementation</h2>
+    <hr>
+    <p>what does this do:
+        <br>
+        - add things into the list
+        <br>
+        - remove the list on the left of the remove bar
+    </p>
+    <div id = "app">
+        <input v-model="currentItem" size="30" @keyup.enter ="addItem()"    autofocus="autofocus">
+        <input id="addButton" type="button" value = "add" @click = "addItem()" >
+        <li v-for="(todo,index) in arr"> {{index+1}}.   {{ todo }} 
+            <input type="button" value = "remove" @click = "removeIndex(index)">
+        </li>
+
+    </div>
+
+    <p>
+        
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src = "main.js"></script>
+
+</body>
+</html>
